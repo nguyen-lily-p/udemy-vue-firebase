@@ -1,0 +1,29 @@
+<html>
+        <head>
+            <title>Vue Basics</title>
+            <!-- development version, includes helpful console warnings -->
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <style>
+                .one{
+                    color: green;
+                }
+                .two{
+                    text-decoration: line-through;
+                }
+            </style>
+        </head>
+    
+        <body>
+            <h1>Vue Basics</h1>
+            <div id="app">
+                <h2>{{ title }}</h2>
+                <p>{{ greet('evening') }}</p>
+                <a v-bind:href="url">Youtube</a> <!-- use v-bind: to bind Vue data to href 
+                                                      would otherwise display {{url}} literally -->
+                <div v-bind:class="classes">Classes from Instance</div>
+                <input type="text" :value="name"> <!--shortcut for v-bind: is just : -->
+            </div>
+    
+            <script src="app.js"></script>
+        </body>
+    </html>
